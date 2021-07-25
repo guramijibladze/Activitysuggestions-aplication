@@ -6,7 +6,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { NameApiService, MOVIE_BASE_URL } from './name-api.service';
 import { environment } from 'src/environments/environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -36,8 +35,7 @@ export function TranslateHttpLoaderFactory(http: HttpClient): TranslateHttpLoade
         defaultLanguage:'ka'
     })
   ],
-  providers: [
-    HttpClient],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
