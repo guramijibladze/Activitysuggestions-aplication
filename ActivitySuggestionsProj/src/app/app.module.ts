@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { ShellModule } from './shell/shell.module';
 
 
 export function TranslateHttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -26,6 +26,7 @@ export function TranslateHttpLoaderFactory(http: HttpClient): TranslateHttpLoade
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    ShellModule,
     TranslateModule.forRoot(
       {
         loader: {
