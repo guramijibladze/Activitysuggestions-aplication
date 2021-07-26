@@ -6,21 +6,22 @@
             </div>
             <div class="menu col">
                 <div class="row">
-                    <a class="col-lg" >{{ "header.HOME" | translate }}</a>
-                    <a class="col-lg" href="">About</a>
-                    <a class="col-lg" href="">App Use</a>
+                    <a class="col-lg" href="">{{ "header.HOME" | translate }}</a>
+                    <a class="col-lg" href="">{{ "header.ABOUT" | translate }}</a>
+                    <a class="col-lg" href="">{{ "header.APP_USE" | translate }}</a>
                 </div>
             </div>
             <div class="leng col ">
-                <div class="float-end">
+                <div class=" float-end">
                     <button 
-                        class="lang en"
-                     
-                        (click)="ka()">
-                    </button>
-                    <button class="lang ka"
-                      
+                        class="lang en m-1 rounded-circle"
+                        [class.inactive]="isEn"
                         (click)="en()">
+                    </button>
+                    <button 
+                        class="lang ka m-1 rounded-circle"
+                        [class.inactive]="isKa"
+                        (click)="ka()">
                     </button>
                 </div>
             </div>

@@ -34,7 +34,7 @@ export function TranslateHttpLoaderFactory(http: HttpClient): TranslateHttpLoade
             useFactory: TranslateHttpLoaderFactory,
             deps: [HttpClient]
         },
-        defaultLanguage:'ka'
+        defaultLanguage:'en'
     })
   ],
   providers: [HttpClient],
