@@ -3,5 +3,8 @@
         "HOME": "Home",
         "ABOUT": "About",
         "APP_USE": "App Use"
+    },
+    "errors":{
+        "NOT_FOUND": "Page not found"
     }
 }
