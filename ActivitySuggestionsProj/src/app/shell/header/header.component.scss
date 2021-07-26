@@ -12,9 +12,12 @@ header{
         text-decoration: none;
         color: rgb(83, 83, 82);
         font-size: 20px;
+        text-align: center;
         &:hover{
             color:#09090c;
             font-size: 21px;
+            background-color: rgb(211, 211, 211);
+            opacity: 0.5;
         }
     }
 
@@ -37,4 +40,13 @@ header{
           }
     }
 
+    svg-icon{
+        cursor: pointer;
+        padding: 0px;
+        text-align: center;
+        &:hover{
+            background-color: rgb(211, 211, 211);
+            opacity: 0.5;
+        }
+    }
 }
