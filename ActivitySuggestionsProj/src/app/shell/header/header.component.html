@@ -12,8 +12,10 @@
                         [svgStyle]="{ 'width.px':29, 'height.px':29 }"
                         (click)="goToHome()">
                     </svg-icon>
-                    <a class="col-lg" href="">{{ "header.ABOUT" | translate }}</a>
-                    <a class="col-lg" href="">{{ "header.APP_USE" | translate }}</a>
+                    <a class="col-lg" 
+                        (click)="goToAbout()">{{ "header.ABOUT" | translate }}</a>
+                    <a class="col-lg" 
+                        (click)="goToAppUse()">{{ "header.APP_USE" | translate }}</a>
                 </div>
             </div>
             <div class="leng col ">
