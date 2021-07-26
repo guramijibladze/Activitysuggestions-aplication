@@ -6,5 +6,8 @@
     },
     "errors":{
         "NOT_FOUND": "Page not found"
+    },
+    "main":{
+        "CHOOSE_YOUR_TYPE": "choose your type"
     }
 }

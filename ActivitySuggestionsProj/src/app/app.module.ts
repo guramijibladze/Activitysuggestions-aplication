@@ -26,7 +26,6 @@ export function TranslateHttpLoaderFactory(http: HttpClient): TranslateHttpLoade
     FormsModule,
     ReactiveFormsModule,
     ShellModule,
-    // MainModule,
     TranslateModule.forRoot(
       {
         loader: {

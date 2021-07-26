@@ -1,0 +1,18 @@
+.container{
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&family=Noto+Sans+JP&display=swap');
+    font-family: 'Montserrat', sans-serif;
+
+    margin-top: 150px;
+    background-color: rgb(250, 249, 248);
+
+    button{
+        width: 120px;
+        // height: 40px;
+    }
+
+    
+}
+
+select{
+    width: 400px;
+}
