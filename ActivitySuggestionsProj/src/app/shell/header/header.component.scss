@@ -32,9 +32,28 @@ header{
         text-decoration: none;
         color: rgb(59, 59, 58);
         font-size: 20px;
-        
+        &:hover{
+            color:#09090c;
+            font-size: 21px;
+        }
     }
-    // .menu{
-    //     margin-right: 250px;
-    // }
+
+    .lang{
+        border: none;
+        outline: none;
+        width: 32px;
+        height: 32px;
+
+        &.ka{
+            background: url("/assets/images/ka.png")
+        }
+
+        &.en{
+            background: url("/assets/images/en.png");
+        }
+
+        &.inactive {
+            filter: grayscale(100%);
+          }
+    }
 }

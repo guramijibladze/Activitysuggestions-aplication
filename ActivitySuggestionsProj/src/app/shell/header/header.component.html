@@ -6,12 +6,24 @@
             </div>
             <div class="menu col">
                 <div class="row">
-                    <a class="col-lg" href="">Home</a>
+                    <a class="col-lg" >{{ "header.HOME" | translate }}</a>
                     <a class="col-lg" href="">About</a>
                     <a class="col-lg" href="">App Use</a>
                 </div>
             </div>
-            <div class="item col"></div>
+            <div class="leng col ">
+                <div class="float-end">
+                    <button 
+                        class="lang en"
+                     
+                        (click)="ka()">
+                    </button>
+                    <button class="lang ka"
+                      
+                        (click)="en()">
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </header>

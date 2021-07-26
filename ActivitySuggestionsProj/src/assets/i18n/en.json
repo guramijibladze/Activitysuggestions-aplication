@@ -1,3 +1,7 @@
 {
-    "HOME": "Home in english"
+    "header":{
+        "HOME": "Home",
+        "ABOUT": "About",
+        "APP_USE": "App Use"
+    }
 }
