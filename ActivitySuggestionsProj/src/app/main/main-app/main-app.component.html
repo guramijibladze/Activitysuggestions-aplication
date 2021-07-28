@@ -1,17 +1,25 @@
 <div class="container">
     <div class="d-flex justify-content-center shadow-lg p-3 mb-5 bg-body rounded">
         <div class="select text-center mt-5">
-            <h3></h3>
-            <select class="form-select mt-4" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-            <div class="btn mt-5">
-                <button class="btn btn-secondary btn-lg">click</button>
-            </div>
-            
+            <form [formGroup]="form">
+                <h3>{{ "main.CHOOSE_YOUR_TYPE" | translate }}</h3>
+                <select class="form-select mt-4" 
+                        aria-label="Default select example"
+                        formControlName="activity">
+                    <option [value]="activity.Education">{{ "main.EDUCATION" | translate }}</option>
+                    <option [value]="activity.Recreational">{{ "main.RECREATIONAL" | translate }}</option>
+                    <option [value]="activity.Social">{{ "main.SOCIAL" | translate }}</option>
+                    <option [value]="activity.Diy">{{ "main.DIY" | translate }}</option>
+                    <option [value]="activity.Charity">{{ "main.CHARITY" | translate }}</option>
+                    <option [value]="activity.Cooking">{{ "main.COOKING" | translate }}</option>
+                    <option [value]="activity.Relaxation">{{ "main.RELAXATION" | translate }}</option>
+                    <option [value]="activity.Music">{{ "main.MUSIC" | translate }}</option>
+                    <option [value]="activity.Busywork">{{ "main.BUSYWORK" | translate }}</option>
+                </select>
+                <div class="btn mt-5">
+                    <button class="btn btn-secondary btn-lg" (click)="log()">click</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

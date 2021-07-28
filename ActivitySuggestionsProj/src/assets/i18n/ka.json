@@ -8,6 +8,15 @@
         "NOT_FOUND": "გვერდი ვერ მოიძებნა"
     },
     "main":{
-        "CHOOSE_YOUR_TYPE":"აირჩიეთ სასურველი ტიპი"
+        "CHOOSE_YOUR_TYPE":"აირჩიეთ სასურველი ტიპი",
+        "EDUCATION": "განათლება",
+        "RECREATIONAL": "გასართობი",
+        "SOCIAL": "სოციალური",
+        "DIY": "წვრილმანი",
+        "CHARITY": "ქველმოქმედება",
+        "COOKING": "სამზარეულო",
+        "RELAXATION": "დასვენება",
+        "MUSIC": "მუსიკა",
+        "BUSYWORK": "სამუშაო"
     }
 }

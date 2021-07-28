@@ -8,6 +8,15 @@
         "NOT_FOUND": "Page not found"
     },
     "main":{
-        "CHOOSE_YOUR_TYPE": "choose your type"
+        "CHOOSE_YOUR_TYPE": "choose your activity",
+        "EDUCATION": "education",
+        "RECREATIONAL": "recreational",
+        "SOCIAL": "social",
+        "DIY": "diy",
+        "CHARITY": "charity",
+        "COOKING": "cooking",
+        "RELAXATION": "relaxation",
+        "MUSIC": "music",
+        "BUSYWORK": "busywork"
     }
 }

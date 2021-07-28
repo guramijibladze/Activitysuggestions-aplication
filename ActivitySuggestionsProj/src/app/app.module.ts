@@ -6,8 +6,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShellModule } from './shell/shell.module';
+import { SharedModule } from './shared/shared.module';
+import { AngularSvgIconModule } from 'angular-svg-icon';
+import { MainModule } from './main/main.module';
 
 
 export function TranslateHttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -23,9 +25,10 @@ export function TranslateHttpLoaderFactory(http: HttpClient): TranslateHttpLoade
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
     ShellModule,
+    SharedModule,
+    MainModule,
+    AngularSvgIconModule.forRoot(),
     TranslateModule.forRoot(
       {
         loader: {
