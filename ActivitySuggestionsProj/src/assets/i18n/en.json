@@ -5,7 +5,8 @@
         "APP_USE": "App Use"
     },
     "errors":{
-        "NOT_FOUND": "Page not found"
+        "NOT_FOUND": "Page not found",
+        "PLEASE_CHOOSE_YOUR_ACTIVITY": "please choose your activity"
     },
     "main":{
         "CHOOSE_YOUR_TYPE": "choose your activity",

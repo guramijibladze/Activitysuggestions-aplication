@@ -5,7 +5,8 @@
         "APP_USE": "გამოყენება"
     },
     "errors":{
-        "NOT_FOUND": "გვერდი ვერ მოიძებნა"
+        "NOT_FOUND": "გვერდი ვერ მოიძებნა",
+        "PLEASE_CHOOSE_YOUR_ACTIVITY": "გთხოვთ აირჩიეთ აქტივობა"
     },
     "main":{
         "CHOOSE_YOUR_TYPE":"აირჩიეთ სასურველი ტიპი",

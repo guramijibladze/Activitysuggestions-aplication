@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Activity } from '../main.model';
 
 @Component({
@@ -10,23 +10,27 @@ import { Activity } from '../main.model';
 export class MainAppComponent implements OnInit {
   form: FormGroup;
   activity = Activity;
-  arrayActivity:string[] = []
+  isSelect:boolean =  false;
 
   constructor() { }
 
   ngOnInit(): void {
     this.createForm()
-    this.arrayActivity = Object.values(this.activity)
   }
 
   private createForm(){
     this.form = new FormGroup({
-      activity: new FormControl(),
+      activity: new FormControl([Validators.required]),
     })
   }
 
 
-  log(){
-    console.log(this.form)
+  submit(){
+    if(!this.form.touched){
+      this.isSelect = true;
+      return
+    }
+    this.isSelect = false;
+    console.log(this.form.value.activity)
   }
 }

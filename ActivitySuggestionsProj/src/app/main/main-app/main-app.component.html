@@ -16,8 +16,10 @@
                     <option [value]="activity.Music">{{ "main.MUSIC" | translate }}</option>
                     <option [value]="activity.Busywork">{{ "main.BUSYWORK" | translate }}</option>
                 </select>
+                <div class="alert alert-danger mt-2" 
+                    *ngIf="isSelect">{{ "errors.PLEASE_CHOOSE_YOUR_ACTIVITY" | translate }}</div>
                 <div class="btn mt-5">
-                    <button class="btn btn-secondary btn-lg" (click)="log()">click</button>
+                    <button class="btn btn-secondary btn-lg" (click)="submit()">click</button>
                 </div>
             </form>
         </div>
