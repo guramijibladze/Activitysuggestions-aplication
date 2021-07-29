@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Activity, ApiBackEnd, ApiView } from '../main.model';
+import { Activity, ApiView } from '../main.model';
 import { BoredapiService } from '../services/boredapi.service';
 import { map } from 'rxjs/operators';
 
@@ -15,7 +15,7 @@ export class MainAppComponent implements OnInit {
   isSelect:boolean =  false;
   selected:string;
 
-  
+
   private _apiview: ApiView;
   get apiview(): ApiView{
     return this._apiview
@@ -55,9 +55,3 @@ export class MainAppComponent implements OnInit {
       
   }
 }
-
-// activity : string,
-//     accessibility: number
-//     website: string,
-//     participants: number;
-//     type: string
