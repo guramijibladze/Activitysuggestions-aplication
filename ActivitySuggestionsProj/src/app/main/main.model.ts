@@ -12,3 +12,10 @@ export enum Activity{
 
 
 
+// accessibility: 0.05
+// activity: "Try a food you don't like"
+// key: "6693574"
+// link: ""
+// participants: 1
+// price: 0.1
+// type: "recreational"

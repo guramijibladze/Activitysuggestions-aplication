@@ -10,6 +10,7 @@ import { ShellModule } from './shell/shell.module';
 import { SharedModule } from './shared/shared.module';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { MainModule } from './main/main.module';
+import { BoredapiService } from './main/services/boredapi.service';
 
 
 export function TranslateHttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
