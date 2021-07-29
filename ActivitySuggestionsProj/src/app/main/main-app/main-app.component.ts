@@ -14,8 +14,12 @@ export class MainAppComponent implements OnInit {
   activity = Activity;
   isSelect:boolean =  false;
   selected:string;
+
+  
   private _apiview: ApiView;
-  private _apibackend: ApiBackEnd;
+  get apiview(): ApiView{
+    return this._apiview
+  }
 
   constructor(
     private boredapiservice: BoredapiService
@@ -42,13 +46,12 @@ export class MainAppComponent implements OnInit {
     const res$ = this.boredapiservice.getResult(this.selected)
       .pipe(map((c) => { 
         return {activity: c.activity,
-                accessibility: c.accessibility,
                 website: c.link,
                 participants: c.participants,
                 type: c.type}
       }))
 
-      res$.subscribe( x => console.log(x))
+      res$.subscribe( x => (this._apiview = x ))
       
   }
 }

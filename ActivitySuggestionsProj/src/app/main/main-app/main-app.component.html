@@ -24,4 +24,40 @@
             </form>
         </div>
     </div>
+
+    <ng-container *ngIf="apiview">
+        <div class="d-flex justify-content-evenly p-3" >
+            <div class="flex-column">
+                <div class="activity mt-4">
+                    <span><h4><b>activity:</b></h4></span>
+                </div>
+                <div class="website mt-4" *ngIf="_apiview.website">
+                    <span><h4><b>website:</b></h4></span>
+                </div>
+                <div class="participants mt-4">
+                    <span><h4><b>participants:</b></h4></span>
+                </div>
+                <div class="type mt-4">
+                    <span><h4><b>type:</b></h4></span>
+                </div>
+            </div>
+
+            <div class="flex-column">
+                <div class="activity mt-4">
+                    <span><h4>{{ _apiview.activity}}</h4></span>
+                </div>
+                <div class="website mt-4" *ngIf="_apiview.website">
+                    <span><h4>{{ _apiview.website}}</h4></span>
+                </div>
+                <div class="participants mt-4">
+                    <span><h4>{{ _apiview.participants}}</h4></span>
+                </div>
+                <div class="type mt-4">
+                    <span><h4>{{ _apiview.type}}</h4></span>
+                </div>
+            </div>
+        </div>
+    </ng-container>
 </div>
+
+

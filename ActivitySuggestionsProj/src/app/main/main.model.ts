@@ -14,7 +14,6 @@ export enum Activity{
 // view  model
 export interface ApiView{
     activity : string,
-    accessibility: number
     website: string,
     participants: number;
     type: string
