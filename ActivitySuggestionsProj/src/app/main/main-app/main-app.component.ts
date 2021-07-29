@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Activity, ApiView } from '../main.model';
 import { BoredapiService } from '../services/boredapi.service';
-import { map } from 'rxjs/operators';
+import { map, finalize } from 'rxjs/operators';
+import { LoadingService } from 'src/app/loading.service';
 
 @Component({
   selector: 'app-main-app',
@@ -22,7 +23,8 @@ export class MainAppComponent implements OnInit {
   }
 
   constructor(
-    private boredapiservice: BoredapiService
+    private boredapiservice: BoredapiService,
+    private loadingServce: LoadingService,
   ) { }
 
   ngOnInit(): void {
@@ -41,10 +43,13 @@ export class MainAppComponent implements OnInit {
       this.isSelect = true;
       return
     }
+    this.loadingServce.start();
     this.isSelect = false;
     this.selected = this.form.value.activity
     const res$ = this.boredapiservice.getResult(this.selected)
-      .pipe(map((c) => { 
+      .pipe(finalize(() => {
+        this.loadingServce.stop();
+      }),map((c) => { 
         return {activity: c.activity,
                 website: c.link,
                 participants: c.participants,

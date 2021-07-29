@@ -12,6 +12,6 @@ import { SpinerComponent } from './loading/spiner/spiner.component';
     SpinerComponent
   ],
   imports: [CommonModule],
-  exports: [TranslateModule, AngularSvgIconModule]
+  exports: [TranslateModule, AngularSvgIconModule, LoadingComponent]
 })
 export class SharedModule { }
