@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable, InjectionToken } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ApiBackEnd } from '../main.model';
 
 export const API_URL = new InjectionToken<string>('url token')
 
@@ -12,7 +13,7 @@ export class BoredapiService {
     private http: HttpClient
   ) { }
 
-  getResult(category?:string):Observable<any>{
-    return this.http.get(`${this.nameApi}&t=${category}`)
+  getResult(category?:string):Observable<ApiBackEnd>{
+    return this.http.get<ApiBackEnd>(`${this.nameApi}&t=${category}`)
   }
 }

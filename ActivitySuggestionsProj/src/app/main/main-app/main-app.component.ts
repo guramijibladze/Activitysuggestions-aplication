@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Activity } from '../main.model';
+import { Activity, ApiBackEnd, ApiView } from '../main.model';
 import { BoredapiService } from '../services/boredapi.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-main-app',
@@ -12,7 +13,9 @@ export class MainAppComponent implements OnInit {
   form: FormGroup;
   activity = Activity;
   isSelect:boolean =  false;
-  selected:string
+  selected:string;
+  private _apiview: ApiView;
+  private _apibackend: ApiBackEnd;
 
   constructor(
     private boredapiservice: BoredapiService
@@ -36,7 +39,22 @@ export class MainAppComponent implements OnInit {
     }
     this.isSelect = false;
     this.selected = this.form.value.activity
-    this.boredapiservice.getResult(this.selected).subscribe( x => console.log(x))
-    // console.log( this.name)
+    const res$ = this.boredapiservice.getResult(this.selected)
+      .pipe(map((c) => { 
+        return {activity: c.activity,
+                accessibility: c.accessibility,
+                website: c.link,
+                participants: c.participants,
+                type: c.type}
+      }))
+
+      res$.subscribe( x => console.log(x))
+      
   }
 }
+
+// activity : string,
+//     accessibility: number
+//     website: string,
+//     participants: number;
+//     type: string
